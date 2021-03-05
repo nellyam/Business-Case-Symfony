@@ -1,0 +1,268 @@
+/**********GENERAL***************/
+body {
+  font-family: "Roboto", serif;
+}
+.row a {
+  text-decoration: none;
+  color: black;
+}
+
+/***********HEADER**************/
+
+header {
+  display: flex;
+  background-color: #19194e;
+  height: 80px;
+  position: fixed;
+  height: 90px;
+  width: 100%;
+  top: 0px;
+  z-index: 1;
+}
+
+header nav {
+  display: flex;
+  color: white;
+}
+
+header  img {
+
+  border-radius: 70px;
+  width: 100px;
+  margin-left: 15px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;  
+  align-items: center;
+  margin-top: 15px;
+}
+
+header nav ul li {
+  
+  margin-left: 180px;
+}
+
+header nav ul li a {
+  color: white;
+  font-family: Roboto, serif;
+}
+
+
+
+i {
+  width: 20px;
+  height: 20px;
+}
+
+/************PARTIE MAIN  SECTION #CHIEN****************/
+
+#chien {
+  background-image: url("../img/goldenret.webp");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  margin: 130px 30px 30px 0px;
+  padding: 60px 30px;
+  font-size: 18px;
+}
+
+#chien h1 {
+  font-size: 60px;
+  margin: 0px 0px 50px 30px;
+}
+
+#chien p {
+  margin-bottom: 70px;
+  margin-left: 30px;
+}
+
+/************PARTIE MAIN  SECTION ARTICLE****************/
+
+article {
+  
+  margin: -80px 0px 30px 65px;
+  background-color: white;
+  padding: 70px 30px;
+}
+
+article #recherche {
+  color: #0f1838;
+  font-size: 23px;
+}
+article i {
+  position: relative;
+  left: 300px;
+  color: rgb(71, 69, 69);
+}
+
+article #caniche {
+  width: 430px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 7px 13px;
+  margin-right: 20px;
+  color: gray;
+  font-size: 22px;
+  background-color: rgba(233, 223, 223, 0.2);
+}
+
+article button {
+  width: 160px;
+  height: 50px;
+  border: none;
+  background-color: #ac6f14;
+  color: white;
+  font-size: 18px;
+}
+
+article #result {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/******************************FILTRE*****************/
+article #filtre div {
+  width: 450px;
+  height: 87px;
+  background-color: #0f1838;
+  position: relative;
+  left: 79px;
+  bottom: 170px;
+  border: 1px solid white;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+
+/******************PREMIER CARRE*****************************/
+#first {
+  background-color: #ac6f14 !important;
+}
+
+#first p {
+  margin-left: 35px;
+  margin-top: 20px;
+}
+
+/***********************DEUXIEME CARRE***************************************/
+
+#filtre #lettres {
+  height: 30px;
+  margin: 0px 20px 0px -80px;
+}
+
+#filtre div:nth-child(0n + 2) p {
+  margin: 0px 0px -7px 0px;
+}
+
+/*******************************TROISIEME CARRE*****************************************/
+
+#filtre div:nth-child(0n + 3) img {
+  margin: 0px 0px 0px -160px;
+}
+
+#filtre div:nth-child(0n + 3) p {
+  margin: 0px 0px -7px 30px;
+}
+
+/**********************************QUATRIEME CARRE***********************************************/
+
+#filtre div:nth-child(0n + 4) img {
+  margin: 0px 0px 0px -100px;
+}
+
+#filtre div:nth-child(0n + 4) p {
+  position: relative;
+  left: 30px;
+  top: 10px;
+}
+
+/*********************************resultatDeRecherche********************************************/
+
+#resultatDeRecherche {
+  margin-top: -120px;
+  margin-left: -10px;
+}
+
+#resultatDeRecherche article img {
+  width: 300px;
+  height: 300px;
+}
+
+#resultatDeRecherche article ul {
+  list-style: none;
+  margin-left: -20px;
+}
+
+#resultatDeRecherche article div p {
+  margin-left: 20px;
+}
+
+#resultatDeRecherche article div p:nth-child(0n + 2) {
+  margin-bottom: 0px;
+}
+
+#resultatDeRecherche article div p:nth-child(0n + 3) {
+  color: grey;
+}
+
+#resultatDeRecherche article div p:last-child {
+  background-color: #ac6f14;
+  text-align: center;
+  padding: 13px 0px;
+  width: 150px;
+  color: white;
+  margin-top: 50px;
+}
+
+/********************************SECTION DE NUMEROS DE PAGES**************************/
+
+#numeroPage p {
+  height: 50px;
+  margin: 50px;
+  background-color: #ebdcdc;
+  padding: 20px;
+  border-radius: 100%;
+  line-height: 100%;
+}
+
+#numeroPage p:first-of-type {
+  background-color: white;
+}
+
+#numeroPage img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+/******************************************FIN MAIN********************************************/
+
+/************************************FOOTER********************************************/
+
+footer {
+  margin: 100px 0px 50px;
+}
+
+footer div p {
+  margin-bottom: 5px;
+}
+
+
+/************************************
+          MEDIA QUERIES
+************************************/
+
+
+/* Nouvelles règles si la fenêtre fait au plus 1024px de large */
+@media screen and (min-width: 1285px)
+{
+    article #filtre div 
+    {
+         position: relative;
+  left: 165px;
+    }
+}
+

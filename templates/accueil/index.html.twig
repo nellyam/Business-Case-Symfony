@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Business Case{% endblock %}
+{% block meta %} 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ {% endblock %}
+
+
+
+ {% block stylesheets %}
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+ {% endblock %}
+
+
+
+ {% block bodyHeader %} 
+     <header>
+        <img src="{{ asset('assets/img/logo.jpg') }}" alt="logo">
+        <nav>  
+            <ul>
+                <li>
+                    <a href="#" class="font-weight-bold">Accueil</a>
+                    <i class="fas fa-caret-down"></i>
+                </li>
+                <li>
+                    <a href="#" class="font-weight-bold">Vente</a>
+                    <i class="fas fa-caret-down"></i>
+                </li>
+                <li><a href="#" class="font-weight-bold">Nelli Amirkhanian</a>
+                    <i class="fas fa-sign-out-alt"></i>
+                </li>
+            </ul>
+        </nav>
+    </header>
+ 
+ {% endblock %}
+
+{% block body %}
+
+<main>
+ {% include "accueil/_trouver-chien.html.twig" %}
+
+
+        <section class="shadow">
+            <article class="d-flex shadow">
+                <div>
+                    <p id="recherche">Par le nom de la race</p>
+                    <div class="d-flex">
+                        <p id="caniche">caniche <i class="fas fa-times"></i></p>
+
+                        <button>Rechercher</button>
+                    </div>
+                    <p id="result">56 chiens correspondent à votre saisie</p>
+                </div>
+
+               {% include "accueil/_filtre.html.twig" %} 
+
+  
+            </article>
+
+            <!--Résultat de la recherche-->
+            <section id="resultatDeRecherche">
+                <div class="container-fluid">
+                  <div class="row">
+               {% include 'accueil/_chien1.html.twig' %}
+               {% include 'accueil/_chien2.html.twig' %}   
+                  </div>
+                </div>
+  
+                <div class="container-fluid">
+                    <div class="row">
+
+                      {% include 'accueil/_chien3.html.twig' %}
+                      {% include 'accueil/_chien4.html.twig' %}
+
+
+                   
+                    </div>
+                </div>  
+            </section>
+          <!--FIN DE RESULTAT DE RECHERCHE-->
+  
+
+          <!--SECTION DE NUMEROS DE PAGES-->
+          <section class="d-flex justify-content-center align-items-center" id="numeroPage">
+              <img src="{{asset('assets/img/Polygon 1.png')}}" alt="polygon">
+              <p class="shadow">1</p>
+              <p>2</p>
+              <p>3</p>
+              <p>4</p>
+              <p>5</p>
+              <img src="{{asset('assets/imG/Polygon 2.png')}}" alt="polygon">
+          </section>
+        </section>
+    </main>
+    <!--*******************************************FIN MAIN**********************************************-->
+
+   <!--*******************************************DEBUT FOOTER**********************************************-->
+
+
+{% endblock %}
+
